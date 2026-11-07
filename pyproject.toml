@@ -1,9 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "fxsig"
-version = "0.1.0"
+version = "0.2.0"
 requires-python = ">=3.11"
 dependencies = ["pandas>=2.2", "numpy", "pyarrow", "pyyaml", "httpx"]
+
 [project.optional-dependencies]
 dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["fxsig", "fxsig.data", "fxsig.features"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
