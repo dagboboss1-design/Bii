@@ -1,0 +1,19 @@
+# ASSUMPTIONS - replace with your broker's real numbers before trusting any result.
+default:
+  slippage_pips: 0.2
+  commission_per_lot_roundturn_usd: 3.5
+  news_spread_multiplier: 3.0   # spread widening around high-impact news
+spread_floor_pips:              # used only if bid/ask history is missing
+  EUR_USD: 0.8
+  GBP_USD: 1.0
+  USD_JPY: 0.9
+  AUD_USD: 1.0
+  USD_CAD: 1.3
+  EUR_GBP: 1.2
+  AUD_NZD: 2.0
+
+# FILL IN with YOUR broker's real numbers (typical ECN/RAW account shown as blanks).
+# Any pair listed here overrides the defaults above for slippage/commission.
+pairs: {}
+#  EUR_USD: {slippage_pips: 0.2, commission_per_lot_roundturn_usd: 7.0}
+#  GBP_USD: {slippage_pips: 0.3, commission_per_lot_roundturn_usd: 7.0}
