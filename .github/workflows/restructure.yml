@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python restructure.py
+      - run: python restructure*1*.py
       - name: Commit new layout
         run: |
           git config user.name "restructure-bot"
